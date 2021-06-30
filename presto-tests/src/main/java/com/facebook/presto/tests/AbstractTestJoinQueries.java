@@ -19,6 +19,7 @@ import com.facebook.presto.sql.analyzer.FeaturesConfig;
 import com.facebook.presto.testing.MaterializedResult;
 import com.facebook.presto.testing.MaterializedRow;
 import com.google.common.collect.ImmutableList;
+import jdk.nashorn.internal.ir.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import static com.facebook.presto.SystemSessionProperties.JOIN_DISTRIBUTION_TYPE;
@@ -68,6 +69,7 @@ public abstract class AbstractTestJoinQueries
                 "GROUP BY a.orderstatus");
     }
 
+    @Ignore
     @Test
     public void testLimitWithJoin()
     {
